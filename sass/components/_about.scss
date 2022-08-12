@@ -1,0 +1,34 @@
+/*Про нас*/
+
+/*Наші цілі*/
+.about-item {
+    max-width: 270px;
+}
+
+.about-item__box {
+    /*height: 120px;*/
+    background-color: getColor('section-fon__secondary');
+    border-radius: 4px;
+    padding: 25px 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-item__image {
+    display: inline;
+}
+
+.about-item__title {
+    margin-bottom: 10px;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: getFonts('title__letter-spacing');
+    text-transform: uppercase;
+}
+
+.about-item__text {
+    font-weight: getFonts('title__font-weight');
+    line-height: getFonts('title__line-height');
+    letter-spacing: getFonts('title__letter-spacing');
+    color: getColor('text-color__secondary');
+}

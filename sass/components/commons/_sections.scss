@@ -1,0 +1,30 @@
+/*Утилітна секція*/
+.section {
+    padding: 94px 0;
+}
+
+/*Замовлення*/
+.section-order {
+    /*height: 600px;*/
+    padding: 200px 0;
+    text-align: center;
+    background-color: getColor('section-fon__primary');
+    background-image:
+        linear-gradient(to right,
+            getColor('box-shadow-8'),
+            getColor('box-shadow-8')),
+        url("../images/photo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*Чим ми займаємося*/
+.section-our-work {
+    padding-top: 0;
+    padding-bottom: 94px;
+}
+
+/*Наша команда*/
+.section-team {
+    background-color: getColor('section-fon__secondary');
+}

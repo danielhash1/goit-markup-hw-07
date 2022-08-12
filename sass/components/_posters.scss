@@ -1,0 +1,73 @@
+/*Постери*/
+.poster-item {
+    max-width: 370px;
+    /*width: calc((100% - 90px) / 3);*/
+    background-color: getColor('content-color');
+    border-bottom:
+        1px solid getColor('poster-item__border-color');
+    cursor: pointer;
+    @include transition-animation(box-shadow);
+    // transition-property: box-shadow;
+    // transition-duration: 250ms;
+    // transition-timing-function:
+    //     cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        box-shadow:
+            0 1px 1px getColor('box-shadow-1'),
+            0 4px 4px getColor('box-shadow-6'),
+            1px 4px 6px getColor('box-shadow-7');
+    }
+}
+
+.poster-item__overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.poster-item__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    background-color: getColor('overlay-fon');
+    font-weight: getFonts('title__font-weight');
+    font-size: getFonts('title__font-size');
+    line-height: getFonts('poster-title__line-height');
+    letter-spacing: getFonts('title__letter-spacing');
+    color: getColor('content-color');
+    transform: translateY(100%);
+    @include transition-animation(transform);
+    // transition-property: transform;
+    // transition-duration: 250ms;
+    // transition-timing-function:
+    //     cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.poster-item:hover .poster-item__title {
+    transform: translateY(0);
+}
+
+.poster-item__label {
+    border-left: 1px solid getColor('poster-item__border-color');
+    border-right: 1px solid getColor('poster-item__border-color');
+    padding: 20px 23px 19px;
+}
+
+.poster-item__name {
+    margin: 0 0 4px;
+    font-size: getFonts('title__font-size');
+    line-height: getFonts('poster-name__line-height');
+    letter-spacing: getFonts('unit__letter-spacing');
+    color: getColor('text-color__primary');
+}
+
+.poster-item__category {
+    font-weight: getFonts('title__font-weight');
+    font-size: getFonts('item__font-size');
+    line-height: getFonts('poster-category__line-height');
+    letter-spacing: getFonts('title__letter-spacing');
+    color: getColor('text-color__secondary');
+}

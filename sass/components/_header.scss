@@ -1,0 +1,142 @@
+/*Хедер*/
+.header {
+    /*height: 80px;*/
+    border-bottom: 1px solid getColor('header__border-color');
+}
+
+/*Обгортка для хедеру та блок навігації*/
+.header__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Блок навігації */
+.header__navigation {
+    display: flex;
+    align-items: center;
+}
+
+.header__list {
+    display: flex;
+    margin-left: 93px;
+
+    /*Контакти*/
+    &--contacts {
+        margin-left: auto;
+
+        & .header__item:not(:first-child) {
+            margin-left: 30px;
+        }
+
+        & .header__item::before {
+            display: none;
+        }
+    }
+}
+
+.header__item {
+    position: relative;
+
+    /*Декоративний елемент навігації*/
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -1px;
+        height: 4px;
+        width: 0;
+        background-color: getColor('general-color');
+        border-radius: 2px;
+        // @include transition-animation(width background-color);
+        // transition-property: width background-color;
+        // transition-duration: 250ms;
+        // transition-timing-function:
+        //     cubic-bezier(0.4, 0, 0.2, 1);
+
+        @include animation-hover(animation-underline-none);
+    }
+
+    &:focus::before {
+        // left: 0;
+        // width: 100%;
+        // background-color: getColor('focus-color');
+
+        @include animation-hover(animation-underline);
+    }
+
+    &:hover::before {
+        // left: 0;
+        // width: 100%;
+        // background-color: getColor('general-color');
+
+        @include animation-hover(animation-underline);
+    }
+
+    &:not(:first-child) {
+        margin-left: 50px;
+    }
+}
+
+.header__link {
+    display: block;
+    position: relative;
+    color: getColor('text-color__primary');
+    padding: 32px 0 31px;
+    @include transition-animation(color);
+    // transition-property: color;
+    // transition-duration: 250ms;
+    // transition-timing-function:
+    //     cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+        color: getColor('focus-color');
+    }
+
+    &:hover {
+        color: getColor('general-color');
+    }
+        
+    /*Декоративний елемент навігації*/
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     right: 0;
+    //     bottom: -1px;
+    //     height: 4px;
+    //     width: 0;
+    //     background-color: getColor('general-color');
+    //     border-radius: 2px;
+    //     // @include transition-animation(width background-color);
+    //     // transition-property: width background-color;
+    //     // transition-duration: 250ms;
+    //     // transition-timing-function:
+    //     //     cubic-bezier(0.4, 0, 0.2, 1);
+
+    //     @include animation-hover(animation-underline-none);
+    // }
+
+    // &:focus::before {
+    //     // left: 0;
+    //     // width: 100%;
+    //     // background-color: getColor('focus-color');
+
+    //     @include animation-hover(animation-underline);
+    // }
+
+    // &:hover::before {
+    //     // left: 0;
+    //     // width: 100%;
+    //     // background-color: getColor('general-color');
+        
+    //     @include animation-hover(animation-underline);
+    // }
+}
+
+/*Контакти*/
+// .header-navigation__contacts {
+//     margin-left: auto;
+// }
+
+// .header-navigation__contact:not(:first-child) {
+//     margin-left: 30px;
+// }

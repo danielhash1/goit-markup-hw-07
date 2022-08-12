@@ -1,0 +1,68 @@
+/*Контакти*/
+.contact-link {
+    display: flex;
+    position: relative;
+    padding: 32px 0 31px;
+    align-items: center;
+    color: getColor('text-color__secondary');
+    @include transition-animation(color fill);
+    // transition-property: color fill;
+    // transition-duration: 250ms;
+    // transition-timing-function:
+    //     cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+        color: getColor('focus-color');
+        fill: currentColor;
+    }
+
+    &:hover {
+        color: getColor('general-color');
+        fill: currentColor;
+    }
+
+    /*Декоративний елемент для контактів*/
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     right: 0;
+    //     bottom: -1px;
+    //     height: 4px;
+    //     width: 0;
+    //     background-color: getColor('general-color');
+    //     border-radius: 2px;
+    //     @include transition-animation(width);
+    //     // transition-property: width;
+    //     // transition-duration: 250ms;
+    //     // transition-timing-function:
+    //     //     cubic-bezier(0.4, 0, 0.2, 1);
+    // }
+
+    // &:focus::before {
+    //     left: 0;
+    //     width: 100%;
+    //     background-color: getColor('focus-color');
+    // }
+
+    // &:hover::before {       
+    //     left: 0;
+    //     width: 100%;
+    //     background-color: getColor('general-color');
+    // }
+}
+
+.contact-link__image {
+    display: inline-block;
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+
+
+
+
+
+
+
+
+
